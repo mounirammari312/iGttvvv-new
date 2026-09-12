@@ -33,7 +33,7 @@ const Sidebar = ({ channels, tags }) => {
         banner.current.append(script);
       }
     }
-  }, []);
+  }, [atOptions]);
 
   return (
     <div className={styles.container}>
@@ -51,6 +51,7 @@ const Sidebar = ({ channels, tags }) => {
                       src={countries[channel.country - 1].img}
                       width={20}
                       height={15}
+                      alt={countries[channel.country - 1].name}
                     />
                     <h3
                       style={{ fontSize: "inherit", margin: "inherit" }}
